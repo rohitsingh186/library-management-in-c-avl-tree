@@ -1,0 +1,80 @@
+# Project: Project2
+# Makefile created by Dev-C++ 5.1.1.0
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o insert_emp.o delete_emp.o search.o get_num_records.o height.o range_search.o print_database.o make_node.o print_emp.o remove_space_make_uppercase.o initialize.o inorder.o find_ht.o num_records.o rotate_left.o rotate_right.o height_balance.o $(RES)
+LINKOBJ  = main.o insert_emp.o delete_emp.o search.o get_num_records.o height.o range_search.o print_database.o make_node.o print_emp.o remove_space_make_uppercase.o initialize.o inorder.o find_ht.o num_records.o rotate_left.o rotate_right.o height_balance.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc  
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" 
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" 
+BIN      = Tree.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS   = $(INCS)  
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Tree.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "Tree.exe" $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+insert_emp.o: insert_emp.c
+	$(CC) -c insert_emp.c -o insert_emp.o $(CFLAGS)
+
+delete_emp.o: delete_emp.c
+	$(CC) -c delete_emp.c -o delete_emp.o $(CFLAGS)
+
+search.o: search.c
+	$(CC) -c search.c -o search.o $(CFLAGS)
+
+get_num_records.o: get_num_records.c
+	$(CC) -c get_num_records.c -o get_num_records.o $(CFLAGS)
+
+height.o: height.c
+	$(CC) -c height.c -o height.o $(CFLAGS)
+
+range_search.o: range_search.c
+	$(CC) -c range_search.c -o range_search.o $(CFLAGS)
+
+print_database.o: print_database.c
+	$(CC) -c print_database.c -o print_database.o $(CFLAGS)
+
+make_node.o: make_node.c
+	$(CC) -c make_node.c -o make_node.o $(CFLAGS)
+
+print_emp.o: print_emp.c
+	$(CC) -c print_emp.c -o print_emp.o $(CFLAGS)
+
+remove_space_make_uppercase.o: remove_space_make_uppercase.c
+	$(CC) -c remove_space_make_uppercase.c -o remove_space_make_uppercase.o $(CFLAGS)
+
+initialize.o: initialize.c
+	$(CC) -c initialize.c -o initialize.o $(CFLAGS)
+
+inorder.o: inorder.c
+	$(CC) -c inorder.c -o inorder.o $(CFLAGS)
+
+find_ht.o: find_ht.c
+	$(CC) -c find_ht.c -o find_ht.o $(CFLAGS)
+
+num_records.o: num_records.c
+	$(CC) -c num_records.c -o num_records.o $(CFLAGS)
+
+rotate_left.o: rotate_left.c
+	$(CC) -c rotate_left.c -o rotate_left.o $(CFLAGS)
+
+rotate_right.o: rotate_right.c
+	$(CC) -c rotate_right.c -o rotate_right.o $(CFLAGS)
+
+height_balance.o: height_balance.c
+	$(CC) -c height_balance.c -o height_balance.o $(CFLAGS)
